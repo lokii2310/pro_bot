@@ -10,6 +10,7 @@ from launch_ros.actions import Node
 import xacro
 
 
+
 def generate_launch_description():
 
     # Check if we're told to use sim time
@@ -29,6 +30,7 @@ def generate_launch_description():
         parameters=[params]
     )
 
+    # node_robot_state_publisher=  Node(package='dummy_sensors', node_executable='dummy_joint_states', output='screen')
 
     # Launch!
     return LaunchDescription([
